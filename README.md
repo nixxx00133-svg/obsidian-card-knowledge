@@ -13,8 +13,13 @@ The writing rules are largely platform-neutral. What changes by platform is how 
 | Gemini CLI | Install from this repository with `gemini skills install`; check with `/skills list`. | Yes, when the local CLI has access to the vault path. |
 | ChatGPT Skills | Upload the skill through the Skills interface where available. | Depends on the chat surface and connected file tools; otherwise it returns Markdown for you to save. |
 | Other chat models | Paste `SKILL.md` or the prompt-only adapter into the chat or a custom agent. | Usually no; save the generated Markdown into Obsidian yourself unless the product provides file access. |
+| Doubao | Add the instructions to a custom agent, or paste them into the current chat. | Ordinary chat/custom agents need an explicit local-file tool; otherwise save Markdown manually. |
+| DeepSeek | Use prompt-only instructions in regular chat; use a project instruction in DeepSeek Harness. | Harness documents local file read/write; direct `SKILL.md` import is not confirmed. |
+| Kimi | Install/create a Skill from the Skills panel or `/skill-creator`; Kimi Work is the desktop option. | Kimi Work can work with authorized local project files; ordinary web chat generally returns Markdown. |
+| Tongyi / Qwen | Use a custom assistant if available, or paste the instructions; developers can configure a Bailian agent. | Requires an explicitly connected local file tool for local vault writes. |
+| WorkBuddy | Import the skill package through its Skills interface, or provide `SKILL.md` as task instructions. | Yes, after granting access to the vault directory and verifying the writes. |
 
-See [`platforms/`](platforms/) for setup and capability notes. Availability and UI steps may vary by plan, workspace, and product version.
+See [`platforms/`](platforms/) for setup and capability notes, including [Doubao](platforms/doubao.md), [DeepSeek](platforms/deepseek.md), [Kimi](platforms/kimi.md), [Tongyi/Qwen](platforms/tongyi.md), and [WorkBuddy](platforms/workbuddy.md). Availability and UI steps may vary by plan, workspace, and product version.
 
 ## Install
 
@@ -58,3 +63,9 @@ This repository contains no personal vault path or conversation archive. The ski
 - [OpenAI Help: Skills in ChatGPT](https://help.openai.com/en/articles/20001066-skills-in-chatgpt)
 - [Anthropic: Extend Claude with skills](https://code.claude.com/docs/en/skills)
 - [Gemini CLI: Agent Skills](https://geminicli.com/docs/cli/skills/)
+- [Doubao: custom agents](https://www.doubao.com/legal/feature_intro)
+- [DeepSeek Harness](https://www.deepseek.com/zh/harness/)
+- [Kimi: Skills](https://www.kimi.com/help/plugins-and-skills/what-are-skills)
+- [Kimi Work](https://www.kimi.com/en/help/kimi-work/overview)
+- [Alibaba Cloud Bailian: Agent applications](https://docs.bailian.console.aliyun.com/zh/model-studio/single-agent-application)
+- [WorkBuddy: product guide](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Product-Guide)
